@@ -10,24 +10,59 @@
     <div class="header">Miễn phí giao hàng đơn từ 300k</div>
     <div class="menu">
         <ul class="nav">
-            <li><h1 href="index.html">Silent standard</h1></li>
-            <li><a href="">TRANG CHỦ</a>
+            <li><a href="index.html" class="logo">Silent standard</h1></a>
+            <li><a href="index.html">TRANG CHỦ</a>
                 <ul class="subnav">
                     <li><a href="">Thông tin</a></li>
                     <li><a href="">Sale</a></li>
                 </ul>
             </li>
-            <li><a href="">VỀ CHÚNG TÔI</a>
+            <li><a href="">ÁO </a>
                 <ul class="subnav">
-                    <li><a href="">size áo</a></li>
-                    <li><a href="">Hỗ trợ</a></li>
+                    <li><a href="">ÁO SƠ MI</a></li>
+                    <li><a href="">ÁO THUN</a></li>
+                    <li><a href="">ÁO CROPTOP</a></li>
                 </ul>
             </li>
-            <li><a href="">ĐĂNG NHẬP</a></li>
-            <li><a href="">ĐĂNG KÝ</a></li>
-            <li><a href=""><input type="button" class="gh" value="GIỎ HÀNG"></a></li>
+            <li><a href="">QUẦN</a></li>
+            <li><a href="">GIẢM GIÁ</a></li>
+            <li><a href="">GIỚI THIỆU</a></li>
+            <li><a href="./dangnhap.html" target="_blank">TÀI KHOẢN</a></li>
+            <li>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input">
+                    <button class="search-button">🔍</button>
+                </div>
+            </li>
+            <li>
+                <a onclick="showcard()"><button class="gh">🛒</button></a>
+            </li>
         </ul>
+        <div id="showcard">
+            <table>
+                <thead>
+                    <tr>
+                       <th>Sản phẩm</th>
+                       <th>Hình</th>
+                       <th>Tên</th>
+                       <th>Đơn giá</th>
+                       <th>Số lượng</th>
+                       <th>Thành tiền</th>
+                       <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody id="mycard">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Tổng đơn hàng</th>
+                        <th id="tongtien" colspan="2">0đ</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
+        
     <!--slider-->
     <div class="slider"></div>
 
@@ -40,56 +75,56 @@
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m66m1rt1kwznc9.webp" alt="Product 1">
             <h3>SilenceStandard Premium Oxford Shirt Logo S [SO02]</h3>
             <p class="price">₫390.000 - ₫450.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
     
         <div class="product-card">
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m66m34e6ha6035.webp" alt="Product 2">
             <h3>SilenceStandard Eco Oxford Logo S/Basic [SO06]</h3>
             <p class="price sale">₫390.000 ₫329.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
     
         <div class="product-card">
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m685th9ea0k764.webp" alt="Product 3">
             <h3>SilenceStandard CoolFeeling Logo S/Askin [ap01]</h3>
             <p class="price sale">₫329.000 ₫299.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
     
         <div class="product-card">
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m685svhk6gqe80.webp" alt="Product 4">
             <h3>SilenceStandard Heavyweight [AN01]</h3>
             <p class="price">₫490.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
         
         <div class="product-card">
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m6dgbywtsncma6.webp" alt="Product 4">
             <h3>SilenceStandard Eco Oxford logo S/basic [SO12]</h3>
             <p class="price">₫360.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
 
         <div class="product-card">
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m685twupglsncd.webp" alt="Product 4">
             <h3>Wide Fit SilenceStandard Premium [QV02]</h3>
             <p class="price">₫390.000-₫450.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
 
         <div class="product-card">
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m685sceafgae19.webp" alt="Product 4">
             <h3>Polo SilenceStandard Premium Logo S</h3>
             <p class="price">₫299.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
 
         <div class="product-card">
             <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m63kqat0prjs45.webp" alt="Product 4">
             <h3>Crop Top SilenceStandard Premium [SO30]</h3>
             <p class="price">₫360.000</p>
-            <button class="button">Chi tiết</button>
+            <button class="button" onclick="addToCart(this)">Chi tiết</button>
         </div>
 
     </div>
