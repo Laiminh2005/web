@@ -76,7 +76,7 @@
     background-color: white;
 }
 .nav>li:hover>a{
-    color: rgb(1, 175, 1);
+    color: rgb(134, 179, 237);
 }
 .subnav
 {
@@ -94,7 +94,7 @@
     color: black;
 }
 .subnav li:hover>a{
-    color: rgb(1, 175, 1);
+    color: rgb(134, 179, 237);
 }
 .nav .subnav{
     list-style-type: none;
@@ -187,6 +187,21 @@
     background-color: #ddd;
     font-size: 16px;
 }
+.tt{
+    background-color: rgb(134, 179, 237);
+    color: black;
+    width: 100%;
+    margin: 7px 0px 7px 0px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.tt:hover{
+    background-color: rgb(101, 157, 229);
+    color: black;
+    transition-duration: 0.4s;
+}
 .slider{
     position: relative;
     display: block;
@@ -251,8 +266,8 @@
     transition-duration: 1s;
 }
 .button:hover {
-    background-color: black;
-    color: white;
+    background-color: rgb(190, 209, 235);
+    color: black;
 }
 
 .end{
@@ -269,7 +284,7 @@
     text-decoration: none;
 }
 .end a:hover{
-    color: rgb(20, 143, 20);
+    color: rgb(134, 179, 237);
 }
 
 .facebook{
