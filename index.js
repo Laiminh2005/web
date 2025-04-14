@@ -11,8 +11,16 @@ function addToCart(x){
     // xóa giá ở sau nếu sản phẩm có khoảng giá
     var gia = parseInt(giaText.replace(/[₫,.]/g, '').split(' ')[0]);
     
-    var sp = [hinh, tensp, gia, soluong];
-    gh.push(sp);
+    // var sp = [hinh, tensp, gia, soluong];
+    // gh.push(sp);
+    // showmycard();
+    const index = gh.findIndex(sp => sp[1] === tensp);
+    if (index !== -1) {
+      gh[index][3] += soluong;
+    } else {
+      const sp = [hinh, tensp, gia, soluong];
+      gh.push(sp);
+    }
     showmycard();
 }
 // toLocaleString chỉ để nó hiện số đẹp hơn thôi ví dụ mặc định nó sẽ hiện 390000 thì dùng toLocaleString nó sẽ thành 390,000
@@ -38,7 +46,13 @@ function showmycard(){
         document.getElementById("tongtien").innerText = tong.toLocaleString() + "₫";
     }
 function removeItem(index) {
-    gh.splice(index, 1); // Xoá sản phẩm ở vị trí index
+    // gh.splice(index, 1); // Xoá sản phẩm ở vị trí index
+    // showmycard();
+    if (gh[index][3] > 1) {
+        gh[index][3] -= 1;
+    } else {
+        gh.splice(index, 1);
+    }
     showmycard();
 }
 //kiểm tra ẩn hiện của giỏ hàng 
