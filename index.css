@@ -153,18 +153,19 @@
     cursor: pointer;
     margin-left: 20px;
     transition: background-color 0.3s;
+    position: relative;
 }
 .gh:hover{
     background-color: #ccc;
     color: black;
 }
 #showcard {
-    position: fixed;
-    right: 20px;
-    top: 90px;
+    position: absolute;
+    right: 100px;
+    top: 100%;
     padding: 10px;
     max-width: 600px;
-    margin: 20px auto;
+    margin: -15px auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
