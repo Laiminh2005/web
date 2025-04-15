@@ -6,7 +6,7 @@
 }
 .BST{
     margin: 10px;
-    width: 340px;
+    width: 392px;
     height: auto;
     text-align: right;
 }
@@ -19,14 +19,4 @@
 }
 .BST li:hover>a{
     color: rgb(134, 179, 237);
-}
-.discount{
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 10px;
-    width: 50px;
-    height: 24px;
 }
