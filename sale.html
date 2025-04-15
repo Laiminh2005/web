@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="chitietsanpham.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="chitietsanpham.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./sale.css">
 </head>
 <body>
     <div class="header">Miễn phí giao hàng đơn từ 300k</div>
     <div class="menu">
         <ul class="nav">
-            <li><a href="index.html" class="logo">Silent standard</h1></a>
+            <li><a href="index.html" class="LOGO">Silent standard</h1></a>
             <li><a href="index.html">TRANG CHỦ</a></li>
             <li><a href="">ÁO </a>
                 <ul class="subnav">
@@ -22,7 +21,7 @@
                 </ul>
             </li>
             <li><a href="">QUẦN</a></li>
-            <li><a href="./sale.html">GIẢM GIÁ</a></li>
+            <li><a href="#">GIẢM GIÁ</a></li>
             <li><a href="">GIỚI THIỆU</a></li>
             <li><a href="./dangnhap.html" target="_blank">TÀI KHOẢN</a></li>
             <li>
@@ -59,75 +58,39 @@
             </table>
         </div>
     </div>
-    
-    <main>
-        <div class="container">
-          <!-- Image Section -->
-          <div class="image-section">
-            <div class="image-wrapper">
-              <img alt="Beige polo shirt" src="https://placehold.co/600x800" />
-              <button class="left"><i class="fas fa-chevron-left"></i></button>
-              <button class="right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-          </div>
-      
-          <!-- Details Section -->
-          <div class="details-section">
-            <h1>299,000₫</h1>
-      
-            <h2>Màu sắc</h2>
-            <div class="color-options">
-              <button></button>
-              <button></button>
-              <button></button>
-            </div>
-      
-            <h2>Kích thước</h2>
-            <div class="size-options">
-              <button>3XL</button>
-              <button>2XL</button>
-              <button>XL</button>
-              <button>L</button>
-              <button>M</button>
-            </div>
-      
-            <div class="quantity-controls">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
-            </div>
-      
-            <div class="action-buttons">
-              <button>THÊM VÀO GIỎ HÀNG</button>
-              <button>MUA NGAY</button>
-            </div>
-      
-            <div class="wishlist-button">
-              <button><i class="far fa-heart"></i><span>YÊU THÍCH</span></button>
-            </div>
-      
-            <div class="share-section">
-              <span>Chia sẻ</span>
-              <button><i class="fab fa-facebook-f"></i></button>
-              <button><i class="fab fa-twitter"></i></button>
-            </div>
-      
-            <div class="availability">
-              <h2>Cửa hàng còn sản phẩm này</h2>
-              <select>
-                <option>Tỉnh thành</option>
-              </select>
-              <div>
-                <p class="font-medium">116 Cầu Giấy:</p>
-                <p>0968995050</p>
-                <p>116 Cầu Giấy, Hà Nội <span class="text-green">(Còn hàng)</span></p>
-              </div>
-            </div>
-          </div>
+    <ul class="BST">
+        <div class="LOGO">
+        <li><a href="#">SALE</a></li>
         </div>
-      </main>
-      
+    </ul>
+    <div class="product-container">
 
+        <div class="product-card">
+            <div class="discount">-10%</div>
+            <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m66m1rt1kwznc9.webp" alt="Product 1">
+            <h3>SilenceStandard Premium Oxford Shirt Logo S [SO02]</h3>
+            <p class="price sale">₫390.000 - ₫450.000</p>
+            <a href="./ctsp1.html"><button class="button">Chi tiết</button></a>
+            <button class="button" onclick="addToCart(this)">Thêm giỏ hàng</button>
+        </div>
+        <div class="product-card">
+            <div class="discount">-10%</div>
+            <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m66m34e6ha6035.webp" alt="Product 2">
+            <h3>SilenceStandard Eco Oxford Logo S/Basic [SO06]</h3>
+            <p class="price sale">₫390.000 ₫329.000</p>
+            <a href="chitietsanpham.html?id=2"><button class="button">Chi tiết</button></a>
+            <button class="button" onclick="addToCart(this)">Thêm giỏ hàng</button>
+        </div>
+    
+        <div class="product-card">
+            <div class="discount">-10%</div>
+            <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m685th9ea0k764.webp" alt="Product 3">
+            <h3>SilenceStandard CoolFeeling Logo S/Askin [ap01]</h3>
+            <p class="price sale">₫329.000 ₫299.000</p>
+            <a href="chitietsanpham.html?id=3"><button class="button">Chi tiết</button></a>
+            <button class="button" onclick="addToCart(this)">Thêm giỏ hàng</button>
+        </div>
+    </div>
     <div class="end">
         <div class="call">
             <span>GỌI MUA HÀNG ( 8:30 - 22:20 )</span>
@@ -143,11 +106,9 @@
             <a href="https://maps.app.goo.gl/4owAzMSpnAxAhgn56">Phố Nguyễn Ngọc Vũ, Quận Cầu Giấy,Hà Nội</a>
         </div>
         <div>
-            <h2>HỖ TRỢ KHÁCH HÀNG</h2>
-            <a href="hdchonsize.html">Hướng dẫn chọn size </a>
-            <a href="">Chính sách bảo mật</a>
-            <a href="">Chính sách xử lý khiếu nại</a>
-            <a href="">Quy định đổi trả</a>
+            <h2>HỖ TRỢ</h2>
+            <a href="./hdchonsize.html">Hướng dẫn chọn size </a>
+            <a href="">Hỗ trợ khách hàng</a>
         </div>
         <div class="flow">
             <span>THEO DÕI CHÚNG TÔI</span>
@@ -166,15 +127,5 @@
         </div>
     </div>
     <script src="index.js"></script>
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get('id');
-      const product = products[id];
-    
-      if (product) {
-        document.querySelector(".image-wrapper img").src = product.image;
-        document.querySelector(".details-section h1").textContent = product.price;
-      }
-    </script>    
 </body>
 </html>
