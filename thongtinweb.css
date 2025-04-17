@@ -38,14 +38,14 @@
     text-decoration: underline;
 }
 .LOGO{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     text-transform: none;
     color: black;
 }
 .BST{
     margin: 10px;
-    width: 395px;
+    width: 369px;
     height: auto;
     text-align: right;
 }
