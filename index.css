@@ -341,4 +341,13 @@
     justify-content: center;
     align-items: center;
 }
-
+.discount{
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 50px;
+    height: 24px;
+}

@@ -1,12 +1,12 @@
 .LOGO{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     text-transform: none;
     color: black;
 }
 .BST{
     margin: 10px;
-    width: 340px;
+    width: 323px;
     height: auto;
     text-align: right;
 }
