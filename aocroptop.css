@@ -1,0 +1,22 @@
+.LOGO{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: none;
+    color: black;
+}
+.BST{
+    margin: 10px;
+    width: 415px;
+    height: auto;
+    text-align: right;
+}
+.BST li:hover{
+    background-color: white;
+}
+.BST li a{
+    color: black;
+    text-decoration: none;
+}
+.BST li:hover>a{
+    color: rgb(134, 179, 237);
+}

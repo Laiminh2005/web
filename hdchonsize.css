@@ -9,6 +9,13 @@
 h4, h5{
     text-align: center;
     color: #333;
+    font-size:23px;
+}
+#showcard table {
+    margin-bottom: 7px;
+}
+#showcard .tt {
+    margin-top: 0; /* Bỏ khoảng trống trên nút */
 }
 table{
     width: 100%;
