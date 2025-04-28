@@ -19,17 +19,6 @@ tbody td {
     padding: 15px 15px;
     font-size: 20px;
 }
-tfoot th {
-    padding: 15px 10px;
-    font-size: 18px;
-    text-align: right;
-    border-top: 2px solid #ddd;
-}
-tfoot #tongt {
-    font-weight: bold;
-    font-size: 18px;
-    color: #e53935;
-}
 tbody td img {
     width: 100px;
 }
@@ -42,4 +31,15 @@ tbody td button {
 }
 tbody td button:hover {
     background-color: #c62828;
+}
+tfoot th {
+    padding: 15px 10px;
+    font-size: 18px;
+    text-align: right;
+    border-top: 2px solid #ddd;
+}
+#tongt {
+    font-weight: bold;
+    font-size: 18px;
+    color: #e53935;
 }

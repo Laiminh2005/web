@@ -45,9 +45,8 @@
 }
 .BST{
     margin: 10px;
-    width: 384px;
     height: auto;
-    text-align: right;
+    text-align: center;
 }
 /* .BST li:hover{
     background-color: white;

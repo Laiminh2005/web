@@ -21,9 +21,8 @@
 }
 .BST{
     margin: 10px;
-    width: 508px;
     height: auto;
-    text-align: right;
+    text-align: center;
 }
 /* .BST li:hover{
     background-color: white;
@@ -57,7 +56,7 @@
 }
 .text1{
     font-family: Arial, sans-serif;
-    background: #fefefe;
+    
     color: #222;
     font-size: 27px;
     font-weight: bold;

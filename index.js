@@ -10,7 +10,7 @@ function addToCart(x){
     var soluong = 1;
     
     // xóa giá ở sau nếu sản phẩm có khoảng giá
-    var gia = parseInt(giaText.replace(/[₫,.]/g, '').split(' ')[0]);
+    var gia = parseInt(giaText.replace(/[₫,.]/g, '').split('->')[1] || giaText.replace(/[₫,.]/g, ''));
     
     const index = gh.findIndex(sp => sp[1] === tensp);
     if (index !== -1) {
@@ -46,7 +46,7 @@ function showmycard(){
     }
 function removeItem(index) {
     // gh.splice(index, 1); // Xoá sản phẩm ở vị trí index
-    // showmycard();
+    //  showmycard();
     if (gh[index][3] > 1) {
         gh[index][3] -= 1;
     } else {
@@ -66,4 +66,3 @@ function showcard(){
         showmycard();
     }
 }
-
