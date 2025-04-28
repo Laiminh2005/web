@@ -10,13 +10,16 @@
     height: auto;
     text-align: right;
 }
-.BST li:hover{
+/* .BST li:hover{
     background-color: white;
-}
+} */
 .BST li a{
     color: black;
     text-decoration: none;
 }
-.BST li:hover>a{
+/* .BST li:hover>a{
+    color: rgb(134, 179, 237);
+} */
+.LOGO li a:hover{
     color: rgb(134, 179, 237);
 }

@@ -1,208 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.body{
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
-.header{
-    /* background-color: red;
-    color: white;
-    text-align: center;
-    padding: 10px 0px;
-    font-size: 18px; */
-    background-color: #d0021b; /* màu đỏ tươi nổi bật */
-    color: white;
-    text-align: center;
-    padding: 10px 0px;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.menu{
-    /* top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    position: sticky;
-    z-index: 1000;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    position: sticky;
-    z-index: 1000;
-    border-bottom: 1px solid #ddd; /* gọn nhẹ hơn */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-.menu .nav{
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    /* height: 100px; */
-    height: 80px;
-    justify-content: center;
-    gap: 12px;
-}
-.nav li{
-    position: relative;
-}
-.nav li a{
-    /* text-decoration: none;
-    color: black;
-    line-height: 30px;
-    padding: 0px 15px;
-    text-transform: uppercase;
-    transition: color 0.3s; */
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    line-height: 30px;
-    padding: 0px 15px;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: none;
-    color: black;
-}
-.nav>li:hover{
-    background-color: white;
-}
-.nav>li:hover>a{
-    color: rgb(134, 179, 237);
-}
-.subnav
-{
-    width: auto;
-    min-width: 150px;
-    height: auto;
-    padding: 5px 0;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.subnav li:hover{
-    background-color: white;
-}
-.subnav li a{
-    color: black;
-}
-.subnav li:hover>a{
-    color: rgb(134, 179, 237);
-}
-.nav .subnav{
-    list-style-type: none;
-    position: absolute;
-    background-color: white;
-    display: none;
-    box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.5);
-    top: 100%;
-    left: 0;
-}
-.nav >li:hover .subnav{
-    display: block;
-}
-.search{
-    display: flex;
-    border: 1px solid white;
-    border-radius: 20px;
-    margin-left: 20px;
-    overflow: hidden;
-}
-.search-input{
-    font-size: 14px;
-    border: none;
-    outline: none;
-    padding: 5px 10px;
-}
-.search-button{
-    /* background-color: white;
-    color: white;
-    cursor: pointer; */
-    background-color: white;
-    border: none;
-    font-size: 16px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.search-button:hover{
-    /* transform: translateY(-1px); */
-    transform: scale(1.1);
-}
-.gh{
-    /* border: black solid 1px;
-    color: black;
-    border-radius: 3px;
-    transition-duration: 1s;
-    padding: 3px;
-    background-color: white;
-    cursor: pointer;
-    margin-left: 20px; */
-    border: 1px solid black;
-    color: black;
-    border-radius: 20px;
-    padding: 6px 12px;
-    background-color: white;
-    cursor: pointer;
-    margin-left: 20px;
-    transition: background-color 0.3s;
-    position: relative;
-}
-.gh:hover{
-    background-color: #ccc;
-    color: black;
-}
-#showcard {
-    position: absolute;
-    right: 100px;
-    top: 100%;
-    padding: 10px;
-    max-width: 600px;
-    margin: -15px auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    overflow-x: auto;
-}
-#showcard table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: sans-serif;
-}
-#showcard th,
-#showcard td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-#showcard tfoot th {
-    background-color: #ddd;
-    font-size: 16px;
-}
-.tt{
-    background-color: rgb(134, 179, 237);
-    color: black;
-    width: 100%;
-    margin: 7px 0px 7px 0px;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 5px;
-    font-size: 14px;
-}
-.tt:hover{
-    background-color: rgb(101, 157, 229);
-    color: black;
-    transition-duration: 0.4s;
-}
-/* chi tiết sản phẩm bắt đầu từ đây */
 .text{
     font-size: 20px;
     margin: 10px;
@@ -212,7 +7,7 @@
     width: 80%;
     border-radius: 10px;
 }
-.box{
+.boxct{
     margin: 10px;
     padding: 10px;
     background-color: white;
@@ -222,25 +17,25 @@
     justify-content: center;
 }
 
-.box .box1{
+.boxct .box1{
     gap: 40px;
     padding: 10px;
     margin: 10px;
     background-color: white;
 }
-.box img{
+.boxct img{
     width: 600px;
     height: auto;
     border-radius: 8px;
 }
-.box .box2{
+.boxct .box2{
     gap: 40px;
     width: 40%;
     padding: 10px;
     margin: 10px;
     background-color: white;
 }
-.box .box2 h2{
+.boxct .box2 h2{
     margin-bottom: 20px;
 }
 .price{
@@ -283,12 +78,12 @@
     text-align: center;
     padding: 3px;
 }
-.button{
+.buttonct{
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
-.button .button1{
+.buttonct .button1{
     background-color: rgb(32, 30, 30);
     color: white;
     border-radius: 3px;
@@ -297,12 +92,12 @@
     width: 40%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.button .button1:hover{
+.buttonct .button1:hover{
     background-color: black;
     color: white;
     transition-duration: 0.4s;
 }
-.button .button2{
+.buttonct .button2{
     background-color: #d0021b;
     color: white;
     border-radius: 3px;
@@ -311,7 +106,7 @@
     width: 40%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.button .button2:hover{
+.buttonct .button2:hover{
     background-color: #b40015;
     color: white;
     transition-duration: 0.4s;
@@ -383,77 +178,3 @@
     text-decoration: none;
     width: 80%;
 }
-/* kết thúc chi tiết sản phẩm */
-.end{
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f1f1f1;
-}
-.end a{
-    display: flex;
-    color: black;
-    text-decoration: none;
-}
-.end a:hover{
-    color: rgb(134, 179, 237);
-}
-
-.facebook{
-    border: #ddd solid 1px;
-    color: black;
-    background: white;
-    border-radius: 3px;
-    transition-duration: 1s;
-    display: block;
-    padding: 3px;
-    
-}
-.facebook:hover{
-    background: black;
-    color: white;
-}
-.ig{
-    border: #ddd solid 1px;
-    color: black;
-    background: white;
-    border-radius: 3px;
-    transition-duration: 1s;
-    display: block;
-    padding: 3px;
-}
-.ig:hover{
-    background: black;
-    color: white;
-}
-.spe{
-    border: #ddd solid 1px;
-    color: black;
-    background: white;
-    border-radius: 3px;
-    transition-duration: 1s;
-    display: block;
-    padding: 3px;
-}
-.spe:hover{
-    background-color: black;
-    color: white;
-}
-.footer {
-    padding: 50px;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f1f1f1;
-}
-
-.footer p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-

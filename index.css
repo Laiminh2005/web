@@ -202,12 +202,18 @@ body{
     color: black;
     transition-duration: 0.4s;
 }
-.slider{
+.slider {
     position: relative;
-    display: block;
-    padding-top: calc((768/1440)*100%);
-    background: url("./Screenshot\ \(17\).png") top center / cover no-repeat;
-    z-index: -1;
+    overflow: hidden;
+}
+.slider-img{
+    width: 400vw;
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+}
+.slider .slider-img img{
+    width: 100vw;
+    display: flex;
 }
 .bst{
     margin: 40px;
@@ -278,10 +284,17 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f1f1f1;
 }
+.end h2{
+    margin-bottom: 5px;
+}
+.end p{
+    margin-bottom: 5px;
+}
 .end a{
     display: flex;
     color: black;
     text-decoration: none;
+    margin-bottom: 5px;
 }
 .end a:hover{
     color: rgb(134, 179, 237);
@@ -292,10 +305,10 @@ body{
     color: black;
     background: white;
     border-radius: 3px;
-    transition-duration: 1s;
+    transition-duration: 0.4s;
     display: block;
-    padding: 3px;
-    
+    padding: 5px;
+    width: 100%;
 }
 .facebook:hover{
     background: black;
@@ -306,9 +319,10 @@ body{
     color: black;
     background: white;
     border-radius: 3px;
-    transition-duration: 1s;
+    transition-duration: 0.4s;
     display: block;
-    padding: 3px;
+    padding: 5px;
+    width: 100%;
 }
 .ig:hover{
     background: black;
@@ -319,27 +333,30 @@ body{
     color: black;
     background: white;
     border-radius: 3px;
-    transition-duration: 1s;
+    transition-duration: 0.4s;
     display: block;
-    padding: 3px;
+    padding: 5px;
+    width: 100%;
 }
 .spe:hover{
     background-color: black;
     color: white;
 }
 .footer {
-    padding: 50px;
+    padding: 30px;
     justify-content: center;
     align-items: center;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f1f1f1;
+    background-color: black;
+    color: white;
 }
 
 .footer p{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2px;
 }
 .product-card {
     position: relative;

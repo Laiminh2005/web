@@ -7,12 +7,12 @@
     flex-wrap: wrap;
     max-width: 1200px;
 }
-.box{
+.boxlb{
     width: 30%;
     background-color: #fdfdfd;
     padding: 10px;
 }
-.box img{
+.boxlb img{
     width: 100%;
     height: auto;
     margin-bottom: 10px;
@@ -49,9 +49,9 @@
     height: auto;
     text-align: right;
 }
-.BST li:hover{
+/* .BST li:hover{
     background-color: white;
-}
+} */
 .BST li a{
     color: black;
     text-decoration: none;
