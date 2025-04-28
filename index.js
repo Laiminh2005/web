@@ -1,6 +1,7 @@
 //cài đặt mặc định cho mục showcard ẩn
 document.getElementById("showcard").style.display="none";
-let gh=[];
+
+let gh = JSON.parse(localStorage.getItem('gioHang')) || [];
 function addToCart(x){
     var box = x.closest('.product-card');
     var hinh = box.querySelector('img').src;
@@ -11,9 +12,6 @@ function addToCart(x){
     // xóa giá ở sau nếu sản phẩm có khoảng giá
     var gia = parseInt(giaText.replace(/[₫,.]/g, '').split(' ')[0]);
     
-    // var sp = [hinh, tensp, gia, soluong];
-    // gh.push(sp);
-    // showmycard();
     const index = gh.findIndex(sp => sp[1] === tensp);
     if (index !== -1) {
       gh[index][3] += soluong;
@@ -21,6 +19,7 @@ function addToCart(x){
       const sp = [hinh, tensp, gia, soluong];
       gh.push(sp);
     }
+    localStorage.setItem('gioHang', JSON.stringify(gh)); // lưu vào localStorage
     showmycard();
 }
 // toLocaleString chỉ để nó hiện số đẹp hơn thôi ví dụ mặc định nó sẽ hiện 390000 thì dùng toLocaleString nó sẽ thành 390,000
@@ -53,6 +52,7 @@ function removeItem(index) {
     } else {
         gh.splice(index, 1);
     }
+    localStorage.setItem('gioHang', JSON.stringify(gh)); // nhớ lưu lại
     showmycard();
 }
 //kiểm tra ẩn hiện của giỏ hàng 
