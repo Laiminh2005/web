@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./hotro.css">
+</head>
+<body>
+    <div class="header">Miễn phí giao hàng đơn từ 300k</div>
+    <div class="menu">
+        <ul class="nav">
+            <li><a href="#" class="logo">Silent standard</a></li>
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#">ÁO </a>
+                <ul class="subnav">
+                    <li><a href="./aosomi.html">ÁO SƠ MI</a></li>
+                    <li><a href="./aothun.html">ÁO THUN</a></li>
+                    <li><a href="./aocroptop.html">ÁO CROPTOP</a></li>
+                </ul>
+            </li>
+            <li><a href="./quan.html">QUẦN</a></li>
+            <li><a href="./sale.html">GIẢM GIÁ</a></li>
+            <li><a href="./thongtinweb.html">THÔNG TIN</a></li>
+            <li><a href="./dangnhap.html" target="_blank">TÀI KHOẢN</a></li>
+            <li>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input">
+                    <button class="search-button">🔍</button>
+                </div>
+            </li>
+            <li>
+                <a onclick="showcard()"><button class="gh">🛒</button></a>
+            </li>
+        </ul>
+        <div id="showcard">
+            <table>
+                <thead>
+                    <tr>
+                       <th>Sản phẩm</th>
+                       <th>Hình</th>
+                       <th>Tên</th>
+                       <th>Đơn giá</th>
+                       <th>Số lượng</th>
+                       <th>Thành tiền</th>
+                       <th></th>
+                    </tr>
+                </thead>
+                <tbody id="mycard">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Tổng đơn hàng</th>
+                        <th id="tongtien" colspan="2">0đ</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="tt">Thanh toán</button> 
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="text1">Làm sao để mua hàng / đặt hàng trên Silence Standard?</div>
+
+  <div class="text2">
+
+    <p>Silence Standard Việt Nam chỉ hỗ trợ đặt và giao hàng cho những người mua có địa chỉ tại Việt Nam.</p>
+
+    <p>Người dùng có thể đặt mua một hay đồng thời nhiều sản phẩm một cách dễ dàng trên Ứng dụng Silence Standard, hoặc thông qua nền tảng web của Silence Standard.</p>
+
+    <h3>Trước khi đặt mua sản phẩm, bạn cần:</h3>
+
+    <ul class="text3">
+      <li>Đăng ký và đăng nhập thành công một tài khoản Silence Standard hợp lệ, đồng thời tài khoản này cần được xác minh/cập nhật các thông tin cá nhân cần thiết (số điện thoại và/hoặc địa chỉ nhận hàng hợp lệ trong lãnh thổ Việt Nam) để có thể đặt được hàng.</li>
+      <li>Tham khảo và lựa chọn sản phẩm phù hợp. Một số thông tin cần biết khi chọn sản phẩm:
+        <ul style="list-style-type: circle; margin-top:10px;">
+          <li>Hình ảnh, tên sản phẩm</li>
+          <li>Phân loại Người bán (Shop Thường, Shop Yêu Thích, Shop Yêu Thích+, Silence Standard Mall)</li>
+          <li>Giá sản phẩm (giá gốc / giá ưu đãi)</li>
+          <li>Nơi bán (tỉnh / thành phố)</li>
+          <li>Đánh giá sản phẩm</li>
+          <li>Số sản phẩm bán ra</li>
+          <li>Thông tin kết cấu, tính năng, chế độ bảo hành (nếu có)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="image">
+      <img src="./img/cachdathang.png" alt="cachdathang">
+    </div>
+
+    <p>Sau khi đã tìm kiếm và lựa chọn được sản phẩm muốn mua, bạn có thể tiến hành đặt hàng bằng 01 trong 03 cách sau đây:</p>
+
+    <h3>1. Mua và thanh toán ngay</h3>
+
+    <p>Trên trang Thông tin sản phẩm của sản phẩm, bạn có thể tiến hành mua và thanh toán ngay cho sản phẩm đó bằng cách thực hiện theo những bước sau:</p>
+
+    <ul class="text3">
+      <li>Lựa chọn <strong>Mua ngay</strong> &gt; chọn <strong>Phân loại</strong> và <strong>Số lượng</strong> sản phẩm muốn đặt mua &gt; chọn <strong>Mua ngay</strong> &gt; Kiểm tra và điều chỉnh (nếu có) <strong>Địa chỉ nhận hàng</strong>, <strong>Phương thức vận chuyển</strong>, <strong>Phương thức thanh toán</strong>, sử dụng <strong>Voucher</strong> hoặc <strong>Silence Standard Xu</strong> (nếu có) &gt; chọn <strong>Đặt hàng</strong> &gt; chọn <strong>Thanh toán</strong> và hoàn thành các bước xác minh tùy thuộc vào phương thức thanh toán để hoàn tất việc đặt hàng.</li>
+    </ul>
+
+    <div class="image">
+        <img src="./img/468985700_18035412881363766_2906870783174705138_n.jpg" alt="cachdathang">
+      </div>
+
+    <h3>2. Thêm sản phẩm vào Giỏ hàng trước khi thanh toán</h3>
+
+    <p>Trên trang Thông tin sản phẩm của sản phẩm, chọn <strong>Thêm vào Giỏ hàng</strong> (biểu tượng 🛒) &gt; chọn <strong>Phân loại</strong> và <strong>Số lượng</strong> sản phẩm muốn đặt mua &gt; chọn <strong>Thêm vào Giỏ hàng</strong> &gt; chọn <strong>Giỏ hàng</strong> (biểu tượng 🛒) &gt; chọn các sản phẩm muốn đặt mua &gt; Điều chỉnh lại <strong>Số lượng</strong> và <strong>Phân loại</strong> của sản phẩm (nếu có) &gt; chọn <strong>Mua hàng</strong> &gt; thực hiện các bước còn lại như mục 1.</p>
+
+    <div class="image">
+        <img src="./img/giohang.png" alt="cachdathang">
+      </div>
+
+    <hr>
+
+    <h3>Bài viết có hữu ích cho bạn không?</h3>
+
+    <div style="margin-top: 20px;">
+      <button style="margin: 5px; padding: 10px 20px;">👍 Có</button>
+      <button style="margin: 5px; padding: 10px 20px;">👎 Không</button>
+    </div>
+
+  </div>
+    </div>
+
+    <div class="end">
+        <div>
+            <p>GỌI MUA HÀNG ( 8:30 - 22:20 )</p>
+            <h2>LIÊN HỆ:034646 0194</h2>
+            <p>Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</p>
+            <p>GÓP Ý, KHIẾU NẠI ( 8:00 - 17:00 )</p>
+        </div>
+        <div>
+            <h2>HỆ THỐNG CỬA HÀNG</h2>
+            <p>Hà Nội:</p>
+            <a href="https://maps.app.goo.gl/1APaMhwQxm2V28ho9">Phố Tràng Tiền, Quận Hoàn Kiếm, Hà Nội</a>
+            <a href="https://maps.app.goo.gl/HnNAz1wAWYJBomKs7">Phố Nguyễn Quý Đức, Quận Thanh Xuân, Hà Nội</a>
+            <a href="https://maps.app.goo.gl/4owAzMSpnAxAhgn56">Phố Nguyễn Ngọc Vũ, Quận Cầu Giấy,Hà Nội</a>
+        </div>
+        <div>
+            <h2>HỖ TRỢ</h2>
+            <a href="./hdchonsize.html">Hướng dẫn chọn size </a>
+            <a href="">Hỗ trợ khách hàng</a>
+        </div>
+        <div class="flow">
+            <p>THEO DÕI CHÚNG TÔI</p>
+            <div class="box">
+                <a href="https://www.facebook.com/profile.php?id=100087584310757" target="_blank"><input type="button" class="facebook" value="Facebook"></a>
+                <a href="https://www.instagram.com/silence_standard/" target="_blank"><input type="button" class="ig" value="Instagram"></a>
+                <a href="https://shopee.vn/silence_standard?categoryId=100011&entryPoint=ShopByPDP&itemId=19789469452&upstream=dd" target="_blank"><input type="button" class="spe" value="Shopee"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>Copyright © 2022 Silent standard - Thời trang - Designed by Laiminh</p>
+            <p>Địa chỉ: Phố Nguyễn Quý Đức, Quận Thanh Xuân, Hà Nội</p>
+            <p>Chịu Trách Nhiệm Quản Lý Nội Dung: Nhóm 11</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="chuyenanh.js"></script>
+</body>
+</html>
