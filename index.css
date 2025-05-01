@@ -110,6 +110,9 @@ body{
     cursor: pointer;
     transition: 0.3s;
 }
+.search-button i{
+    font-weight: bold;
+}
 .search-button:hover{
     transform: scale(1.1);
 }
@@ -123,6 +126,10 @@ body{
     margin-left: 20px;
     transition: background-color 0.3s;
     position: relative;
+}
+.gh i{
+    font-weight: bold;
+    font-size: 18px;
 }
 .gh:hover{
     background-color: #ccc;
