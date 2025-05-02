@@ -185,5 +185,41 @@
         </div>
     </div>
     <script src="index.js"></script>
+    <script src="thongtinsanpham.js"></script>
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+    const product = products.find(p => p.id === id);
+
+    if (product) {
+        document.querySelector(".box1 img").src = product.image;
+        document.querySelector(".box2 h2").innerText = product.name;
+        document.querySelector(".box2 .price").innerText = product.price;
+
+        const ctsp1 = document.querySelectorAll(".ctsp1 a");
+        const ctsp2 = document.querySelectorAll(".ctsp2 a");
+
+        const fields = [
+        product.brand,
+        product.style,
+        product.collar,
+        product.collarType,
+        product.fashion,
+        product.origin,
+        product.material,
+        product.pattern,
+        product.shippedFrom
+        ];
+
+        fields.forEach((value, index) => {
+        ctsp2[index].innerText = value;
+        });
+
+        document.querySelector(".mt").innerText = product.description;
+    } else {
+        alert("Không tìm thấy sản phẩm!");
+    }
+    </script>
+
 </body>
 </html>
