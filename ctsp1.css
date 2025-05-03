@@ -178,7 +178,3 @@
     text-decoration: none;
     width: 80%;
 }
-
-.product-price.highlight {
-    color: red; /* Màu đỏ cho giá của sản phẩm id 1 và 2 */
-  }
