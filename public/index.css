@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+.header{
+    background-color: #d0021b;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu{
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    position: sticky;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.menu .nav{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    height: 80px;
+    justify-content: center;
+    gap: 12px;
+}
+.nav li{
+    position: relative;
+}
+.nav li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 0px 15px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: none;
+    color: black;
+}
+.nav>li:hover{
+    background-color: white;
+}
+.nav>li:hover>a{
+    color: rgb(134, 179, 237);
+}
+.subnav
+{
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    padding: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.subnav li:hover{
+    background-color: white;
+}
+.subnav li a{
+    color: black;
+}
+.subnav li:hover>a{
+    color: rgb(134, 179, 237);
+}
+.nav .subnav{
+    list-style-type: none;
+    position: absolute;
+    background-color: white;
+    display: none;
+    box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.5);
+    top: 100%;
+    left: 0;
+}
+.nav >li:hover .subnav{
+    display: block;
+}
+.search{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.search-input{
+    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+.search-button{
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.search-button i{
+    font-weight: bold;
+}
+.search-button:hover{
+    transform: scale(1.1);
+}
+.gh{
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px;
+    padding: 6px 12px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+.gh i{
+    font-weight: bold;
+    font-size: 18px;
+}
+.gh:hover{
+    background-color: #ccc;
+    color: black;
+}
+#showcard {
+    position: absolute;
+    right: 100px;
+    top: 100%;
+    padding: 10px;
+    max-width: 625px;
+    margin: -15px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow-x: auto;
+    width: 100%;
+}
+#showcard table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+#showcard th,
+#showcard td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+#showcard tfoot th {
+    background-color: #ddd;
+    font-size: 16px;
+}
+#mycard button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+#mycard button:hover {
+    background-color: #c62828;
+}
+#tongtien {
+    font-weight: bold;
+    font-size: 18px;
+    color: #e53935;
+}
+.tt{
+    background-color: rgb(134, 179, 237);
+    color: #333;
+    width: 100%;
+    margin: 7px 0px 7px 0px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+.tt:hover{
+    background-color: rgb(101, 157, 229);
+    color: #333;
+    transition-duration: 0.4s;
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+.slider-img{
+    width: 400vw;
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+}
+.slider .slider-img img{
+    width: 100vw;
+    display: flex;
+}
+.bst{
+    margin: 40px;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 40px;
+    margin: 0 auto 60px;
+    padding: 0;
+    background-color: #fdfcf8;
+}
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 270px;
+    text-align: center;
+    padding: 15px;
+}
+.product-card:hover{
+    transform: translateY(-5px);
+}
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.product-card p {
+    font-size: 14px;
+    color: #666;
+}
+.product-card .price {
+    font-weight: bold;
+    color: #333;
+}
+.product-card .sale {
+    color: red;
+    font-weight: bold;
+}
+.button {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: black solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.button:hover {
+    background-color: rgb(190, 209, 235);
+    color: black;
+}
+
+.end{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+}
+.end h2{
+    margin-bottom: 5px;
+}
+.end p{
+    margin-bottom: 5px;
+}
+.end a{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.end a:hover{
+    color: rgb(134, 179, 237);
+}
+
+.facebook{
+    border: #ddd solid 1px;
+    color: black;
+    background: white;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+.facebook:hover{
+    background: black;
+    color: white;
+}
+.ig{
+    border: #ddd solid 1px;
+    color: black;
+    background: white;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+.ig:hover{
+    background: black;
+    color: white;
+}
+.spe{
+    border: #ddd solid 1px;
+    color: black;
+    background: white;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+.spe:hover{
+    background-color: black;
+    color: white;
+}
+.footer {
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    color: white;
+}
+
+.footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+/*lâm bùi làm giảm giá*/
+.product-card {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+    background-color: white;
+}
+.discount {
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 50px;
+    height: 24px;
+    border-radius: 12px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*kết thúc giảm giá*/
+

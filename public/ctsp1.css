@@ -1,0 +1,180 @@
+.text{
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(248, 247, 247);
+    width: 80%;
+    border-radius: 10px;
+}
+.boxct{
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.boxct .box1{
+    gap: 40px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+}
+.boxct img{
+    width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+.boxct .box2{
+    gap: 40px;
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+}
+.boxct .box2 h2{
+    margin-bottom: 20px;
+}
+.price{
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.color{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.color .cc{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.color .cc:hover{
+    transform: scale(1.1);
+}
+.size{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.size p:hover{
+    background-color: rgb(230, 227, 227);
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.size p{
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 3px;
+}
+.buttonct{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.buttonct .button1{
+    background-color: rgb(32, 30, 30);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 15px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.buttonct .button1:hover{
+    background-color: black;
+    color: white;
+    transition-duration: 0.4s;
+}
+.buttonct .button2{
+    background-color: #d0021b;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 15px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.buttonct .button2:hover{
+    background-color: #b40015;
+    color: white;
+    transition-duration: 0.4s;
+}
+.yt{
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: none;
+    padding: 15px;
+    width: 81.7%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.yt:hover{
+    background-color: rgb(230, 227, 227);
+    color: black;
+    transition-duration: 0.4s;
+}
+.share{
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: flex;
+    color: black;   
+    font-size: 14px;
+}
+.share:hover{
+    color: rgb(134, 179, 237);
+}
+.combobox select{
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: none;
+    padding: 15px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.ctsp{
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    display: flex;
+}
+.ct{
+    background-color: rgb(248, 247, 247);
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 10px;
+}
+.ctsp .ctsp1{
+    background-color: white;
+    width: 20%;
+    padding: 10px;
+}
+.ctsp .ctsp2{
+    background-color: white;
+    width: 55%;
+    padding: 10px;
+}
+.mt{
+    background-color: white;
+    text-decoration: none;
+    width: 80%;
+}

@@ -1,0 +1,67 @@
+.header-tuyendung {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 30px auto 40px;
+    padding: 0 10px;
+  }
+  
+  .title-tuyendung {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .std {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+  }
+  
+.boxtd {
+    display: block;
+    background: white;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .boxtd:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .boxtd .job-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left: 20px;;
+    color: #333;
+  }
+  
+  .boxtd .info-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-left: 20px;;
+}
+
+.boxtd .info-line p {
+    width: 30%;
+    margin: 2px 0;
+}
+
+  
+  .boxtd p::before {
+    margin-right: 5px;
+  }
+  
+  

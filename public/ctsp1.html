@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ctsp1.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+</head>
+<body>
+    <div class="header">Miễn phí giao hàng đơn từ 300k</div>
+    <div class="menu">
+        <ul class="nav">
+            <li><a href="index.html" class="logo">Silent standard</h1></a>
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="./index.html">ÁO </a>
+                <ul class="subnav">
+                    <li><a href="./aosomi.html">ÁO SƠ MI</a></li>
+                    <li><a href="./aothun.html">ÁO THUN</a></li>
+                    <li><a href="./aocroptop.html">ÁO CROPTOP</a></li>
+                </ul>
+            </li>
+            <li><a href="./quan.html">QUẦN</a></li>
+            <li><a href="./sale.html">GIẢM GIÁ</a></li>
+            <li><a href="./thongtinweb.html">THÔNG TIN</a></li>
+            <li><a href="./dangnhap.html" target="_blank">TÀI KHOẢN</a></li>
+            <li>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input">
+                    <button class="search-button">
+                        <i class="ti-search"></i>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <a onclick="showcard()"><button class="gh">
+                    <i class="ti-shopping-cart"></i>
+                </button></a>
+            </li>
+        </ul>
+        <div id="showcard">
+            <table>
+                <thead>
+                    <tr>
+                       <th>Sản phẩm</th>
+                       <th>Hình</th>
+                       <th>Tên</th>
+                       <th>Đơn giá</th>
+                       <th>Số lượng</th>
+                       <th>Thành tiền</th>
+                       <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody id="mycard">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Tổng đơn hàng</th>
+                        <th id="tongtien" colspan="2">0đ</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    
+    <div class="boxct">
+        <h2 class="text">Chi tiết sản phẩm</h2>
+        <div class="box1">
+            <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m66m1rt1kwznc9.webp" alt="Product 1">
+        </div>
+        <div class="box2">
+            <h2>SilenceStandard Premium Oxford Shirt Logo S [SO02]</h2>
+            <p class="price">₫390.000 - ₫450.000</p>
+            <p class="price">Màu sắc</p>
+            <div class="color">
+                <span class="cc" style="background-color: gray; border: 1px solid #333;" title="Xám"></span>
+                <span class="cc" style="background-color: rgb(63, 141, 219); border: 1px solid #333;" title="Xanh"></span>
+                <span class="cc" style="background-color: rgb(211, 104, 177); border: 1px solid #333;" title="Hồng"></span>
+            </div>
+            <p class="price">Kích thước</p>
+            <div class="size">
+                <p>S</p>
+                <p>M</p> 
+                <p>L</p>
+                <p>XL</p>
+                <p>2XL</p>
+            </div>
+            <div class="buttonct">
+                <button class="button1">THÊM VÀO GIỎ HÀNG</button>
+                <button class="button2">MUA NGAY</button>
+            </div>
+            <div>
+                <button class="yt">YÊU THÍCH</button>
+            </div>
+            <a href="#" class="share">CHIA SẺ  ></a>
+            <a href="./hdchonsize.html" class="share">BẢNG QUY ĐỔI KÍCH CỠ  ></a>
+            <a class="share">CHỌN KHU VỰC</a>
+            <div class="combobox">
+                <select>
+                    <option>Thanh Xuân</option>
+                    <option>Cầu giấy</option>
+                    <option>Hoàn Kiếm</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="ctsp">
+        <h2 class="ct">Chi tiết sản phẩm</h2>
+        <div class="ctsp1">
+            <a>Thương hiệu</a><br><br>
+            <a>Dáng kiểu áo</a><br><br>
+            <a>Cổ áo</a><br><br>
+            <a>Kiểu cổ áo</a><br><br>
+            <a>Phong cách</a><br><br>
+            <a>Xuất xứ</a><br><br>
+            <a>Chất liệu</a><br><br>
+            <a>Mẫu</a><br><br>
+            <a>Gửi từ</a><br><br>
+        </div>
+        <div class="ctsp2">
+            <a>SilenceStandard</a><br><br>
+            <a>Rộng</a><br><br>
+            <a>Cổ sơ mi</a><br><br>
+            <a>Spread Collar</a><br><br>
+            <a>Hàn Quốc, Retro, Đường phố</a><br><br>
+            <a>Hàn Quốc</a><br><br>
+            <a>Cotton</a><br><br>
+            <a>Sọc</a><br><br>
+            <a>Hà Nội</a><br><br>
+        </div>
+        <h2 class="ct">Mô tả sản phẩm</h2>
+        <p class="mt">Áo sơ mi ngắn tay Silence Standard Premium Oxford Stripe<br>
+
+            Là mẫu áo dáng suông có thể mang được đa dạng kiểu dáng cho cả nam và nữ, thêu logo S.<br>
+            
+            Chất liệu cotton được nhập từ Hq giúp sản phẩm chống nhăn và co khi giặt. <br>
+            
+            Nhà máy gia công xuất khẩu với tiêu chuẩn nghiêm ngặt từng đường may và không có 1 cọng chỉ thừa.<br>
+            
+            Bảo hành sản phẩm<br>
+            
+            - Thời gian bảo hành sản phẩm là 3 tháng kể từ ngày mua<br>
+            
+            - Sản phẩm này đã được sản xuất thông qua quá trình kiểm soát chất lượng nghiêm ngặt và đã vượt qua việc kiểm tra các yêu cầu an toàn về chất độc hại được quy định.<br>
+            
+            - Sản phẩm này đã được xử lý công nghệ Silicon Wash và Caustic Wash để chống hiện tượng co vải  và phai màu sau khi giặt.<br>
+            
+            ĐÁNH GIÁ SẢN PHẨM</p>
+    </div>
+    <div class="end">
+        <div>
+            <p>GỌI MUA HÀNG ( 8:30 - 22:20 )</p>
+            <h2>LIÊN HỆ:034646 0194</h2>
+            <p>Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</p>
+            <p>GÓP Ý, KHIẾU NẠI ( 8:00 - 17:00 )</p>
+        </div>
+        <div>
+            <h2>HỆ THỐNG CỬA HÀNG</h2>
+            <p>Hà Nội:</p>
+            <a href="https://maps.app.goo.gl/1APaMhwQxm2V28ho9">Phố Tràng Tiền, Quận Hoàn Kiếm, Hà Nội</a>
+            <a href="https://maps.app.goo.gl/HnNAz1wAWYJBomKs7">Phố Nguyễn Quý Đức, Quận Thanh Xuân, Hà Nội</a>
+            <a href="https://maps.app.goo.gl/4owAzMSpnAxAhgn56">Phố Nguyễn Ngọc Vũ, Quận Cầu Giấy,Hà Nội</a>
+        </div>
+        <div>
+            <h2>HỖ TRỢ</h2>
+            <a href="./hdchonsize.html">Hướng dẫn chọn size </a>
+            <a href="hotro.html">Hỗ trợ khách hàng</a>
+            <a href="tuyendung.html">Tuyển dụng</a>
+        </div>
+        <div class="flow">
+            <h2>THEO DÕI CHÚNG TÔI</h2>
+            <div class="box">
+                <a href="https://www.facebook.com/profile.php?id=100087584310757" target="_blank"><input type="button" class="facebook" value="Facebook"></a>
+                <a href="https://www.instagram.com/silence_standard/" target="_blank"><input type="button" class="ig" value="Instagram"></a>
+                <a href="https://shopee.vn/silence_standard?categoryId=100011&entryPoint=ShopByPDP&itemId=19789469452&upstream=dd" target="_blank"><input type="button" class="spe" value="Shopee"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>Copyright © 2022 Silent standard - Thời trang - Designed by Laiminh</p>
+            <p>Địa chỉ: Phố Nguyễn Quý Đức, Quận Thanh Xuân, Hà Nội</p>
+            <p>Chịu Trách Nhiệm Quản Lý Nội Dung: Nhóm 11</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="thongtinsanpham.js"></script>
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+    const product = products.find(p => p.id === id);
+
+    if (product) {
+        document.querySelector(".box1 img").src = product.image;
+        document.querySelector(".box2 h2").innerText = product.name;
+        document.querySelector(".box2 .price").innerText = product.price;
+
+        const ctsp1 = document.querySelectorAll(".ctsp1 a");
+        const ctsp2 = document.querySelectorAll(".ctsp2 a");
+
+        const fields = [
+        product.brand,
+        product.style,
+        product.collar,
+        product.collarType,
+        product.fashion,
+        product.origin,
+        product.material,
+        product.pattern,
+        product.shippedFrom
+        ];
+
+        fields.forEach((value, index) => {
+        ctsp2[index].innerText = value;
+        });
+
+        document.querySelector(".mt").innerText = product.description;
+    } else {
+        alert("Không tìm thấy sản phẩm!");
+    }
+    </script>
+
+</body>
+</html>
