@@ -215,12 +215,12 @@ body{
     font-size: 14px;
     font-family: Arial, sans-serif;
     font-weight: bold;
-}
-.tt:hover{
+} */
+.tt:hover{ 
     background-color: rgb(101, 157, 229);
     color: #333;
     transition-duration: 0.4s;
-} */
+} 
 .slider {
     position: relative;
     overflow: hidden;
