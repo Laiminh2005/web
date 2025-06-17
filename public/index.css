@@ -179,7 +179,32 @@ body{
     font-size: 18px;
     color: #e53935;
 }
+.row-gh{
+    display: flex;
+    margin-top: 5px;
+    /* border-radius: 5px; */
+}
 .tt{
+    /* flex: 1; chia đều 2 nút */
+    background-color: rgb(134, 179, 237);
+    color: #333;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    /* border: none; ||xoa vien trang giua 2 nut neu muon thanh 1 thanhthanh */
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.tt-gh{
+    flex: 3;
+}
+.tt-tt{
+    flex: 7;
+}
+/* .tt{
     background-color: rgb(134, 179, 237);
     color: #333;
     width: 100%;
@@ -195,7 +220,7 @@ body{
     background-color: rgb(101, 157, 229);
     color: #333;
     transition-duration: 0.4s;
-}
+} */
 .slider {
     position: relative;
     overflow: hidden;
