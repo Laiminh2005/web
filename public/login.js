@@ -6,7 +6,7 @@ const inpUserName = document.querySelector("#name");
 const inpEmail = document.querySelector("#email");
 const inpPass = document.querySelector("#password");
 
-const Dangky = document.querySelector("#or");
+const Dangky = document.querySelector("#dangkyform");
 
 const handlelogin = function (event)
 {
