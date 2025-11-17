@@ -2,12 +2,21 @@ import {auth, db} from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 import { collection, addDoc } from "firebase/firestore"; 
 
-document.addEventListener("DOMContentLoaded", () => {
 const inpUserName = document.querySelector("#name");
 const inpEmail = document.querySelector("#email");
 const inpPass = document.querySelector("#password");
 
 const Dangky = document.querySelector("#dangkyform");
+
+const simpleHash = (str) => {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            const char = str.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        return hash.toString(16);
+    };
 
 const handlelogin = function (event)
 {
@@ -74,11 +83,12 @@ const handlelogin = function (event)
         const userData = {
             name,
             email,
-            password,
             role_id,
             point: 0,
+            passwordHash: simpleHash(password), // Lưu mã hóa thay vì plain text
+            createdAt: new Date().toISOString()
         }
-        return addDoc(collection(db,"users"), userData)
+        return setDoc(doc(collection(db,"users"), userData));
     })
     .then(()=>{
         alert("Đăng ký thành công");
@@ -90,4 +100,3 @@ const handlelogin = function (event)
 }
 
 Dangky.addEventListener('submit', handlelogin);
-});
