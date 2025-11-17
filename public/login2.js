@@ -1,6 +1,5 @@
-import { use } from "react";
 import { auth } from "./firebase.js";
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js/auth";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
 const inpemail = document.querySelector("#email");
 const inpPass = document.querySelector("#password");
@@ -25,7 +24,7 @@ const handlelogin = function(event){
         {
             user:
             {
-                emai: user.emai
+                email: user.emai
             },
             expiry: new Date().getTime() + 2*60*60*1000 // dang xuat sau 2h
         };
