@@ -2,6 +2,10 @@ import {auth, db} from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM loaded");
+
 const inpUserName = document.querySelector("#name");
 const inpEmail = document.querySelector("#email");
 const inpPass = document.querySelector("#password");
@@ -88,7 +92,7 @@ const handlelogin = function (event)
             passwordHash: simpleHash(password), // Lưu mã hóa thay vì plain text
             createdAt: new Date().toISOString()
         }
-        return setDoc(doc(collection(db,"users"), userData));
+        return setDoc(doc(db, "users", user.uid), userData);
     })
     .then(()=>{
         alert("Đăng ký thành công");
@@ -100,3 +104,4 @@ const handlelogin = function (event)
 }
 
 Dangky.addEventListener('submit', handlelogin);
+});
