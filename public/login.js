@@ -71,7 +71,7 @@ const handlelogin = function (event)
     .then ((userCredential)=>{
         const user = userCredential.user;
         const userData = {
-            Name,
+            name,
             email,
             password,
             role_id,
@@ -88,4 +88,4 @@ const handlelogin = function (event)
     })
 }
 
-or.addEventListener('submit', handlelogin);
+Dangky.addEventListener('submit', handlelogin);
