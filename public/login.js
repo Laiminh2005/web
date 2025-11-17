@@ -1,6 +1,6 @@
 import {auth, db} from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import { collection, addDoc } from "firebase/firestore"; 
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 const inpUserName = document.querySelector("#name");
 const inpEmail = document.querySelector("#email");
