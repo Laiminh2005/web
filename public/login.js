@@ -2,6 +2,7 @@ import {auth, db} from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 import { collection, addDoc } from "firebase/firestore"; 
 
+document.addEventListener("DOMContentLoaded", () => {
 const inpUserName = document.querySelector("#name");
 const inpEmail = document.querySelector("#email");
 const inpPass = document.querySelector("#password");
@@ -89,3 +90,4 @@ const handlelogin = function (event)
 }
 
 Dangky.addEventListener('submit', handlelogin);
+});
