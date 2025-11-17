@@ -3,24 +3,21 @@ import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebase
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM loaded");
-
 const inpUserName = document.querySelector("#name");
 const inpEmail = document.querySelector("#email");
 const inpPass = document.querySelector("#password");
 
 const Dangky = document.querySelector("#dangkyform");
 
-const simpleHash = (str) => {
-        let hash = 0;
-        for (let i = 0; i < str.length; i++) {
-            const char = str.charCodeAt(i);
-            hash = ((hash << 5) - hash) + char;
-            hash = hash & hash;
-        }
-        return hash.toString(16);
-    };
+// const simpleHash = (str) => {
+//         let hash = 0;
+//         for (let i = 0; i < str.length; i++) {
+//             const char = str.charCodeAt(i);
+//             hash = ((hash << 5) - hash) + char;
+//             hash = hash & hash;
+//         }
+//         return hash.toString(16);
+//     };
 
 const handlelogin = function (event)
 {
@@ -87,9 +84,10 @@ const handlelogin = function (event)
         const userData = {
             name,
             email,
+            password,
             role_id,
             point: 0,
-            passwordHash: simpleHash(password), // Lưu mã hóa thay vì plain text
+            // passwordHash: simpleHash(password), // Lưu mã hóa thay vì plain text
             createdAt: new Date().toISOString()
         }
         return setDoc(doc(db, "users", user.uid), userData);
@@ -104,4 +102,3 @@ const handlelogin = function (event)
 }
 
 Dangky.addEventListener('submit', handlelogin);
-});
