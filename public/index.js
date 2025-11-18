@@ -66,3 +66,63 @@ function showcard(){
         showmycard();
     }
 }
+// thanh toán
+// FIREBASE
+import { db } from "./firebase.js";
+import {
+    collection,
+    addDoc,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+// NÚT THANH TOÁN
+const btnCheckout = document.querySelector(".tt-tt");
+
+if (btnCheckout) {
+    btnCheckout.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        // LẤY GIỎ HÀNG
+        let cart = JSON.parse(localStorage.getItem('gioHang')) || [];
+
+        if (cart.length === 0) {
+            alert("Giỏ hàng đang trống!");
+            return;
+        }
+
+        // CHUYỂN CART → DẠNG ĐỐI TƯỢNG CHUẨN ĐỂ ĐẨY LÊN FIRESTORE
+        const items = cart.map(sp => ({
+            image: sp[0],
+            name: sp[1],
+            price: sp[2],
+            quantity: sp[3],
+            total: sp[2] * sp[3]
+        }));
+
+        // TÍNH TỔNG
+        const totalOrder = items.reduce((sum, it) => sum + it.total, 0);
+
+        // TẠO ĐƠN HÀNG
+        const order = {
+            items: items,
+            total: totalOrder,
+            status: "pending",
+            createdAt: serverTimestamp()
+        };
+
+        try {
+            // LƯU ĐƠN HÀNG LÊN FIREBASE
+            await addDoc(collection(db, "orders"), order);
+
+            // CLEAR GIỎ HÀNG
+            localStorage.removeItem("gioHang");
+
+            alert("Đặt hàng thành công! Đơn hàng đã được ghi nhận.");
+            window.location.reload(); // reload lại để giỏ rỗng
+
+        } catch (err) {
+            console.error(err);
+            alert("Có lỗi xảy ra khi thanh toán!");
+        }
+    });
+}
