@@ -1,55 +1,41 @@
 import { db } from "./firebase.js";
-import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import { collection, getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
-const table = document.getElementById("customerTable"); // <-- cập nhật đúng ID
+const table = document.getElementById("customerTable");
 
 async function loadCustomers() {
-    const usersSnap = await getDocs(collection(db, "users"));
-    const ordersSnap = await getDocs(collection(db, "orders"));
+    try {
+        const usersSnap = await getDocs(collection(db, "users"));
+        table.innerHTML = ""; // reset bảng
 
-    // Gom đơn hàng theo email
-    const orderMap = {};
+        usersSnap.forEach(docSnap => {
+            const u = docSnap.data();
+            const email = u.email;
 
-    ordersSnap.forEach(doc => {
-        const data = doc.data();
-
-        if (!data.customerEmail || data.status !== "paid") return;
-
-        if (!orderMap[data.customerEmail]) {
-            orderMap[data.customerEmail] = {
-                count: 0,
-                total: 0
-            };
-        }
-
-        orderMap[data.customerEmail].count++;
-
-        // tính tổng tiền
-        let sum = 0;
-        data.items.forEach(item => {
-            sum += item.total;
+            table.innerHTML += `
+                <tr>
+                    <td>${u.name || "(Không có tên)"}</td>
+                    <td>${email}</td>
+                    <td><button class="delete-btn" data-id="${docSnap.id}">Xóa</button></td>
+                </tr>
+            `;
         });
 
-        orderMap[data.customerEmail].total += sum;
-    });
-
-    // Hiển thị user
-    usersSnap.forEach(doc => {
-        const u = doc.data();
-        const email = u.email;
-
-        const paidCount = orderMap[email]?.count || 0;
-        const totalSpent = orderMap[email]?.total || 0;
-
-        table.innerHTML += `
-            <tr>
-                <td>${u.name || "(Không có tên)"}</td>
-                <td>${email}</td>
-                <td>${paidCount}</td>
-                <td>${totalSpent.toLocaleString()}đ</td>
-            </tr>
-        `;
-    });
+        // Gắn sự kiện Xóa
+        document.querySelectorAll(".delete-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const id = btn.getAttribute("data-id");
+                const confirmDelete = confirm("Bạn có chắc muốn xóa khách hàng này không?");
+                if (confirmDelete) {
+                    await deleteDoc(doc(db, "users", id));
+                    alert("Đã xóa khách hàng!");
+                    loadCustomers(); // load lại bảng
+                }
+            });
+        });
+    } catch (error) {
+        console.error("Lỗi khi load customers:", error);
+    }
 }
 
 loadCustomers();
