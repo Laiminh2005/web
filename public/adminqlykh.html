@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./thongtinweb.css">
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+</head>
+<body>
+    <!-- <div class="header">Miễn phí giao hàng đơn từ 400k</div> -->
+    <div class="menu">
+        <ul class="nav">
+            <li><a href="#" class="logo">Silent standard</a></li>
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#">ĐƠN HÀNG </a>
+                <!-- <ul class="subnav">
+                    <li><a href="./aosomi.html">ÁO SƠ MI</a></li>
+                    <li><a href="./aothun.html">ÁO THUN</a></li>
+                    <li><a href="./aocroptop.html">ÁO CROPTOP</a></li>
+                </ul> -->
+            </li>
+            <li><a href="./quan.html">KHÁCH HÀNG</a></li>
+            <li><a href="./sale.html">DOANH THU</a></li>
+            <li><a href="./thongtinweb.html">THÔNG TIN</a></li>
+            <!-- <li><a href="./dangki.html" target="_blank">TÀI KHOẢN</a></li> -->
+            <li>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input">
+                    <button class="search-button">
+                        <i class="ti-search"></i>
+                    </button>
+                </div>
+            </li>
+            <!-- <li>
+                <a onclick="showcard()"><button class="gh">
+                    <i class="ti-shopping-cart"></i>
+                </button></a>
+            </li> -->
+        </ul>
+        <!-- <div id="showcard">
+            <table>
+                <thead>
+                    <tr>
+                       <th>Sản phẩm</th>
+                       <th>Hình</th>
+                       <th>Tên</th>
+                       <th>Đơn giá</th>
+                       <th>Số lượng</th>
+                       <th>Thành tiền</th>
+                       <th></th>
+                    </tr>
+                </thead>
+                <tbody id="mycard">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Tổng đơn hàng</th>
+                        <th id="tongtien" colspan="2">0đ</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="row-gh">
+                <a href="./gh.html" class="tt tt-gh">Giỏ hàng</a>
+                <a href="#" class="tt tt-tt">Thanh toán</a>
+            </div>
+        </div> -->
+    </div>
+        
+    <!--slider-->
+    <!-- <div class="slider">
+        <div class="slider-img">
+            <img src="./img/468985700_18035412881363766_2906870783174705138_n.jpg" alt="...">
+            <img src="./img/469003795_18035412773363766_2163965974369992238_n.jpg" alt="...">
+            <img src="./img/469197392_18035413217363766_8172960132112478111_n.jpg" alt="...">
+            <img src="./img/469226959_18035413184363766_3668778840247704686_n.jpg" alt="...">
+        </div>
+    </div> -->
+
+    <!-- <h2 class="bst">Bộ sưu tập</h2> -->
+
+
+    <div class="admin-container">
+        <h2>Danh sách khách hàng</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên khách hàng</th>
+                    <th>Email</th>
+                    <th>Số đơn đã thanh toán</th>
+                    <th>Tổng chi tiêu</th>
+                </tr>
+            </thead>
+        <tbody id="customerTable"></tbody>
+        </table>
+    </div>
+
+    <h2 class="bst">Thông tin</h2>
+
+    <div class="container">
+        <div class="boxlb">
+            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t51.82787-15/559159741_18065510297363766_513255503251077357_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGof9bzym_X4vhB6-XiFflEgcYNpNGs4MeBxg2k0azgx9s3KIUFuYI6ClEuTHDixjJmVsBJVYnLN6G2Tdua51E3&_nc_ohc=HqHJAdrpzZ4Q7kNvwHUw-5J&_nc_oc=AdkMg5Y1FvZoQwaVzZqVY4tBiT4Pw4wygbIle-q2sMSXUSiOc7G8eEepq8WEpLquoL8bh1iFoJ6kg2aPRPAzQuIV&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&_nc_gid=wx23gXGlWTVGfI4CqovQjw&oh=00_Afg_ewWa4HE2IuTCkSRscCEljRQu58vkTLnTQySruZHrzA&oe=69224126" alt="">
+            <p class="title">TẦM NHÌN - SỨ MỆNH SILENT STANDARD</p>
+            <p class="subtitle">TẦM NHÌN - SỨ MỆNH SILENT STANDARD</p>
+            <a href="./webtt1.html" class="readmore">Xem thêm</a>
+        </div>
+        <div class="boxlb">
+            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t51.82787-15/521407552_18058213391363766_6572493912023337685_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFzx7b1aQLclHCxgmksxOoLXpmhdJ1ApslemaF0nUCmyfAE_BpxeSJRkc_lOPIc_xjTwS1mRLZN7rL25h3wTlKe&_nc_ohc=U7NxDIrO4FwQ7kNvwFe-YFc&_nc_oc=Adn27syYMzxjsNL4pe2tSVGIPg0JOWgxXqeAMtO6JFaI0CdOCmuMrQTZwV0bVu1X5i4jNvNPbN-3EpO1ttZmz2ew&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&_nc_gid=OkEXaD3o4_EmsvAcrk1S-Q&oh=00_Afj0a2_-qB8kC7kjghOS4HY6pF8QbKXOog_-jw7AK57vuw&oe=69223AA2" alt="">
+            <p class="title">Hệ Thống Cửa Hàng</p>
+            <p class="subtitle">Hệ Thống Cửa Hàng</p>
+            <a href="./webtt2.html" class="readmore">Xem thêm</a>
+        </div>
+        <div class="boxlb">
+            <img src="https://down-bs-vn.img.susercontent.com/b26dedb34b449683852ea24dabf3a4f5.webp" alt="">
+            <p class="title">SIÊU SALE 8-3</p>
+            <p class="subtitle">SIÊU SALE 8-3</p>
+            <a href="./webtt3.html" class="readmore">Xem thêm</a>
+        </div>
+    </div>
+
+    <div class="end">
+        <div>
+            <p>GỌI MUA HÀNG ( 8:30 - 22:20 )</p>
+            <h2>LIÊN HỆ:034646 0194</h2>
+            <p>Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</p>
+            <p>GÓP Ý, KHIẾU NẠI ( 8:00 - 17:00 )</p>
+        </div>
+        <div>
+            <h2>HỆ THỐNG CỬA HÀNG</h2>
+            <p>Hà Nội:</p>
+            <a href="https://maps.app.goo.gl/1APaMhwQxm2V28ho9">Phố Tràng Tiền, Quận Hoàn Kiếm, Hà Nội</a>
+            <a href="https://maps.app.goo.gl/HnNAz1wAWYJBomKs7">Phố Nguyễn Quý Đức, Quận Thanh Xuân, Hà Nội</a>
+            <a href="https://maps.app.goo.gl/4owAzMSpnAxAhgn56">Phố Nguyễn Ngọc Vũ, Quận Cầu Giấy,Hà Nội</a>
+        </div>
+        <div>
+            <h2>HỖ TRỢ</h2>
+            <a href="./hdchonsize.html">Hướng dẫn chọn size </a>
+            <a href="hotro.html">Hỗ trợ khách hàng</a>
+            <a href="tuyendung.html">Tuyển dụng</a>
+        </div>
+        <div class="flow">
+            <h2>THEO DÕI CHÚNG TÔI</h2>
+            <div class="box">
+                <a href="https://www.facebook.com/profile.php?id=100087584310757" target="_blank"><input type="button" class="facebook" value="Facebook"></a>
+                <a href="https://www.instagram.com/silence_standard/" target="_blank"><input type="button" class="ig" value="Instagram"></a>
+                <a href="https://shopee.vn/silence_standard?categoryId=100011&entryPoint=ShopByPDP&itemId=19789469452&upstream=dd" target="_blank"><input type="button" class="spe" value="Shopee"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>Copyright © 2022 Silent standard - Thời trang - Designed by Laiminh, t dau?</p>
+            <p>Địa chỉ: Phố Nguyễn Quý Đức, Quận Thanh Xuân, Hà Nội</p>
+            <p>Chịu Trách Nhiệm Quản Lý Nội Dung: Nhóm 11</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="chuyenanh.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="thanhtoan.js"></script>
+    <script type="module" src="donhang.js"></script>
+</body>
+</html>
