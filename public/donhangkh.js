@@ -61,46 +61,61 @@
 //         myOrdersTable.innerHTML += row;
 //     });
 // });
-import { db, auth } from "./firebase.js";
-import { collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import { db } from "./firebase.js";
+import { collection, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
-const table = document.getElementById("customerTable");
+const session = JSON.parse(localStorage.getItem("user_session"));
+if (!session?.user?.uid) {
+    alert("Bạn cần đăng nhập!");
+    window.location.href = "dangnhap.html";
+}
 
-auth.onAuthStateChanged(async user => {
-    if (!user) {
-        console.log("Chưa đăng nhập!");
+const currentUserId = session.user.uid;
+const myOrdersTable = document.getElementById("myOrdersTable");
+const noOrdersText = document.getElementById("no-orders");
+
+const q = query(
+    collection(db, "orders"),
+    where("userId", "==", currentUserId),
+    where("status", "==", "approved") // Chỉ hiển thị các đơn đã được duyệt
+);
+
+onSnapshot(q, (snapshot) => {
+    myOrdersTable.innerHTML = "";
+
+    if (snapshot.empty) {
+        noOrdersText.classList.remove("hidden");
         return;
     }
 
-    try {
-        // Lấy đơn hàng của user hiện tại đã được admin duyệt
-        const ordersRef = collection(db, "orders");
-        const q = query(
-            ordersRef, 
-            where("userId", "==", user.uid),
-            where("status", "==", "approved")
-        );
+    noOrdersText.classList.add("hidden");
 
-        const ordersSnap = await getDocs(q);
-        table.innerHTML = "";
+    snapshot.forEach(docItem => {
+        const d = docItem.data();
+        const id = docItem.id;
 
-        if (ordersSnap.empty) {
-            table.innerHTML = "<tr><td colspan='3'>Chưa có đơn hàng được duyệt</td></tr>";
-            return;
-        }
+        // Kiểm tra kiểu dữ liệu createdAt
+        const createdAt = d.createdAt?.toDate ? d.createdAt.toDate().toLocaleString() : d.createdAt || "";
 
-        ordersSnap.forEach(docSnap => {
-            const order = docSnap.data();
-            table.innerHTML += `
-                <tr>
-                    <td>${docSnap.id}</td>
-                    <td>${order.total || 0}</td>
-                    <td>${order.status}</td>
-                </tr>
-            `;
-        });
+        const itemsHtml = (d.items || []).map(sp => `
+            <div class="order-item">
+                <b>${sp.name}</b> — ${sp.quantity} x ${sp.price.toLocaleString()}₫
+            </div>
+        `).join("");
 
-    } catch (error) {
-        console.error("Lỗi khi load orders:", error);
-    }
+        const statusClass = d.status.toLowerCase() === "approved" ? "approved" : "pending";
+
+        const row = `
+            <tr>
+                <td>${id}</td>
+                <td>${itemsHtml}</td>
+                <td><b>${d.total?.toLocaleString() || 0}₫</b></td>
+                <td><span class="badge ${statusClass}">${d.status}</span></td>
+                <td>${createdAt}</td>
+            </tr>
+        `;
+
+        myOrdersTable.innerHTML += row;
+    });
 });
+
