@@ -77,7 +77,7 @@ const noOrdersText = document.getElementById("no-orders");
 const q = query(
     collection(db, "orders"),
     where("userId", "==", currentUserId),
-    where("status", "==", "approved") // Chỉ hiển thị các đơn đã được duyệt
+    // where("status", "==", "approved") // Chỉ hiển thị các đơn đã được duyệt
 );
 
 onSnapshot(q, (snapshot) => {
