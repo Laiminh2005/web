@@ -37,6 +37,7 @@ const handlelogin = function(event){
         {
             user:
             {
+                uid: user.uid, // check khach hang
                 email: user.email
             },
             expiry: new Date().getTime() + 2*60*60*1000 // dang xuat sau 2h

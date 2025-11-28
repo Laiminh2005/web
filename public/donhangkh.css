@@ -1,0 +1,47 @@
+.orders-container {
+    width: 90%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orders-table th, .orders-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.orders-table th {
+    background: #f3f3f3;
+    text-align: left;
+}
+
+.order-item {
+    margin-bottom: 6px;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.badge.pending {
+    background: #f39c12;
+}
+
+.badge.approved {
+    background: #27ae60;
+}
+
+.hidden {
+    display: none;
+}

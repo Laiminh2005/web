@@ -29,6 +29,7 @@ if (btnCheckout) {
         const totalOrder = items.reduce((s, it) => s + it.total, 0);
 
         const order = {
+            userId: user.uid,// thêm id người dùng vào đơn hàng 
             items: items,
             total: totalOrder,
             status: "pending",
