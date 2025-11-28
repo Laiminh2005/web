@@ -6,10 +6,20 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 const btnCheckout = document.querySelector(".tt-tt");
+// lấy uid từ session
+const session = JSON.parse(localStorage.getItem("user_session"));
+const userId = session?.user?.uid || null;
+
 
 if (btnCheckout) {
     btnCheckout.addEventListener("click", async (e) => {
         e.preventDefault();
+
+        if (!userId) {
+            alert("Bạn cần đăng nhập để đặt hàng!");
+            window.location.href = "dangnhap.html";
+            return;
+        }
 
         let cart = JSON.parse(localStorage.getItem('gioHang')) || [];
 
@@ -29,7 +39,7 @@ if (btnCheckout) {
         const totalOrder = items.reduce((s, it) => s + it.total, 0);
 
         const order = {
-            userId: user.uid,// thêm id người dùng vào đơn hàng 
+            userId: userId,// thêm id người dùng vào đơn hàng ... hiện tại đang bị lỗi ko thanh toán được
             items: items,
             total: totalOrder,
             status: "pending",
