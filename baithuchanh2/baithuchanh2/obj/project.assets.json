@@ -99,23 +99,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\quanl\\.nuget\\packages\\": {},
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\quanl\\Downloads\\C#\\baithuchanh2\\baithuchanh2\\baithuchanh2.csproj",
+      "projectUniqueName": "D:\\QUYENN\\HK_V\\NHAP_MON_TMDT\\web\\baithuchanh2\\baithuchanh2\\baithuchanh2.csproj",
       "projectName": "baithuchanh2",
-      "projectPath": "C:\\Users\\quanl\\Downloads\\C#\\baithuchanh2\\baithuchanh2\\baithuchanh2.csproj",
-      "packagesPath": "C:\\Users\\quanl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\quanl\\Downloads\\C#\\baithuchanh2\\baithuchanh2\\obj\\",
+      "projectPath": "D:\\QUYENN\\HK_V\\NHAP_MON_TMDT\\web\\baithuchanh2\\baithuchanh2\\baithuchanh2.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "D:\\QUYENN\\HK_V\\NHAP_MON_TMDT\\web\\baithuchanh2\\baithuchanh2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\quanl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -169,7 +169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
