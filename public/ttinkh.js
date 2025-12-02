@@ -3,6 +3,10 @@ import {
     doc,
     getDoc
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import {
+    onAuthStateChanged,
+    signOut
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
 // DOM elements
 const loadingEl = document.getElementById("loading");
@@ -13,25 +17,24 @@ const nameEl = document.getElementById("name");
 const emailEl = document.getElementById("email");
 const createdAtEl = document.getElementById("createdAt");
 
-async function loadUserProfile() {
-    loadingEl.style.display = "block";
-    profileEl.style.display = "none";
+loadingEl.style.display = "block";
+profileEl.style.display = "none";
 
-    // Lấy user từ Firebase Auth
-    const user = auth.currentUser;
-
+// ❗ DÙNG onAuthStateChanged để lấy user CHUẨN
+onAuthStateChanged(auth, async (user) => {
     if (!user) {
-        loadingEl.innerHTML = "Bạn chưa đăng nhập!";
+        loadingEl.innerHTML = "Bạn cần đăng nhập để xem thông tin!";
+        setTimeout(() => (window.location.href = "dangnhap.html"), 1500);
         return;
     }
 
-    // Gán thẻ HTML
+    // ——— Có user rồi, hiển thị dữ liệu ———
     uidEl.textContent = user.uid;
     emailEl.textContent = user.email;
     createdAtEl.textContent = user.metadata.creationTime;
 
-    // Lấy thông tin từ Firestore (nếu có)
     try {
+        // Lấy thêm thông tin người dùng từ Firestore
         const userRef = doc(db, "users", user.uid);
         const snap = await getDoc(userRef);
 
@@ -41,28 +44,23 @@ async function loadUserProfile() {
         } else {
             nameEl.textContent = "(Không có trong Firestore)";
         }
-
     } catch (err) {
         console.error("Lỗi lấy Firestore:", err);
-        nameEl.textContent = "(Lỗi)";
     }
 
-    // Hiện giao diện
     loadingEl.style.display = "none";
     profileEl.style.display = "block";
-}
+});
 
-loadUserProfile();
-
-// ====== NÚT ĐĂNG XUẤT ======
+// ========== NÚT ĐĂNG XUẤT ==========
 const logoutBtn = document.createElement("button");
 logoutBtn.className = "btn-logout";
 logoutBtn.textContent = "Đăng xuất";
 profileEl.appendChild(logoutBtn);
 
 logoutBtn.addEventListener("click", async () => {
-    await auth.signOut();
+    await signOut(auth);
     localStorage.removeItem("user_session");
     alert("Bạn đã đăng xuất!");
-    window.location.href = "login.html";
+    window.location.href = "dangnhap.html";
 });
