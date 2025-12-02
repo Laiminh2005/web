@@ -135,6 +135,82 @@ body{
     background-color: #ccc;
     color: black;
 }
+/*nguoi dung*/
+/* Vùng bao icon + dropdown */
+.user-menu {
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon user */
+.user-icon {
+    font-size: 22px;
+    cursor: pointer;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown */
+.user-dropdown {
+    position: absolute;
+    top: 40px; /* dính sát icon, KHÔNG tạo khoảng hở */
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 130px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    padding: 5px;
+}
+
+/* Không để khoảng hở gây mất hover */
+.user-menu:hover .user-dropdown,
+.user-dropdown:hover {
+    display: flex;
+}
+
+/* Item dropdown */
+.user-dropdown li {
+    list-style: none;
+    width: 100%;
+}
+
+.user-dropdown li a{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+.user-dropdown li button {
+    background-color: #d0021b;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+}
+
+.user-dropdown li a:hover{
+    background: #f2f2f2;
+}
+.user-dropdown li button:hover {
+    background-color: #b40015;
+    color: white;
+    transition-duration: 0.4s;
+}
+
 #showcard {
     position: absolute;
     right: 100px;

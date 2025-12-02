@@ -66,3 +66,31 @@ function showcard(){
         showmycard();
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const logoutBtn = document.querySelector(".logout-btn");
+
+// Ẩn nút đăng xuất nếu chưa đăng nhập
+const userSession = localStorage.getItem("user_session");
+if (!userSession && logoutBtn) {
+    logoutBtn.style.display = "none";
+}
+
+// Xử lý đăng xuất
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+        const session = localStorage.getItem("user_session");
+        
+        if (!session) {
+            alert("Bạn chưa đăng nhập!");
+            return;
+        }
+
+        localStorage.removeItem("user_session");
+        alert("Đăng xuất thành công!");
+        window.location.href = "./dangki.html";
+    });
+}
+
+});

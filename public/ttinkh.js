@@ -46,3 +46,21 @@ if (!session || !session.user) {
         }
     })();
 }
+
+const toggleBtn = document.getElementById("toggleUpdate");
+const updateWrapper = document.getElementById("updateWrapper");
+
+// Trạng thái đóng/mở
+let isOpen = false;
+
+toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+        updateWrapper.style.display = "block";
+        toggleBtn.textContent = "Đóng lại";
+    } else {
+        updateWrapper.style.display = "none";
+        toggleBtn.textContent = "Cập nhật thông tin";
+    }
+});
