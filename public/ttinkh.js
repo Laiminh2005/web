@@ -1,66 +1,48 @@
-import { auth, db } from "./firebase.js";
+import { db } from "./firebase.js";
 import {
     doc,
     getDoc
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
-import {
-    onAuthStateChanged,
-    signOut
-} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
-// DOM elements
-const loadingEl = document.getElementById("loading");
+// Lấy session lưu khi đăng nhập
+const session = JSON.parse(localStorage.getItem("user_session"));
+
 const profileEl = document.getElementById("profile");
-
 const uidEl = document.getElementById("uid");
 const nameEl = document.getElementById("name");
 const emailEl = document.getElementById("email");
 const createdAtEl = document.getElementById("createdAt");
 
-loadingEl.style.display = "block";
-profileEl.style.display = "none";
+// Không có session → chưa đăng nhập
+if (!session || !session.user) {
+    alert("Bạn cần đăng nhập để xem thông tin tài khoản");
+    window.location.href = "dangnhap.html";
+} else {
+    // Lấy user từ session
+    const user = session.user;
 
-// ❗ DÙNG onAuthStateChanged để lấy user CHUẨN
-onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-        loadingEl.innerHTML = "Bạn cần đăng nhập để xem thông tin!";
-        setTimeout(() => (window.location.href = "dangnhap.html"), 1500);
-        return;
-    }
-
-    // ——— Có user rồi, hiển thị dữ liệu ———
+    // Hiện thông tin có sẵn
     uidEl.textContent = user.uid;
     emailEl.textContent = user.email;
-    createdAtEl.textContent = user.metadata.creationTime;
 
-    try {
-        // Lấy thêm thông tin người dùng từ Firestore
-        const userRef = doc(db, "users", user.uid);
-        const snap = await getDoc(userRef);
+    // Lấy thêm từ Firestore
+    (async () => {
+        try {
+            const userRef = doc(db, "users", user.uid);
+            const snap = await getDoc(userRef);
 
-        if (snap.exists()) {
-            const data = snap.data();
-            nameEl.textContent = data.name || "(Chưa cập nhật)";
-        } else {
-            nameEl.textContent = "(Không có trong Firestore)";
+            if (snap.exists()) {
+                const data = snap.data();
+                nameEl.textContent = data.name || "(Chưa cập nhật)";
+                createdAtEl.textContent = data.createdAt || "(Không có)";
+            } else {
+                nameEl.textContent = "(Không có trong Firestore)";
+                createdAtEl.textContent = "(Không có)";
+            }
+
+            profileEl.style.display = "block";
+        } catch (err) {
+            console.error("Lỗi lấy Firestore:", err);
         }
-    } catch (err) {
-        console.error("Lỗi lấy Firestore:", err);
-    }
-
-    loadingEl.style.display = "none";
-    profileEl.style.display = "block";
-});
-
-// ========== NÚT ĐĂNG XUẤT ==========
-const logoutBtn = document.createElement("button");
-logoutBtn.className = "btn-logout";
-logoutBtn.textContent = "Đăng xuất";
-profileEl.appendChild(logoutBtn);
-
-logoutBtn.addEventListener("click", async () => {
-    await signOut(auth);
-    localStorage.removeItem("user_session");
-    alert("Bạn đã đăng xuất!");
-    window.location.href = "dangnhap.html";
-});
+    })();
+}
