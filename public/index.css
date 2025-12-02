@@ -482,3 +482,70 @@ body{
 }
 /*kết thúc giảm giá*/
 
+
+/* định dạng mục đang được chọn*/
+.nav-link {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-link.active {
+  color: rgb(134, 179, 237); /* hoặc màu bạn muốn */
+  font-weight: bold;
+  /* border-bottom: 2px solid red; */
+}
+
+/* icon tài khoản*/
+.account-menu{
+    padding-bottom: 10px;
+}
+.account-btn{
+    /* border: 1px solid black; */
+    color: black;
+    border-radius: 50%;
+    /* padding: 8px 10px;
+    background-color: white; */
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 18px;
+    transition: 0.2s;
+    /* display: inline-block; */
+}
+
+.account-btn:hover{
+    background-color: transparent;
+}
+
+/*drop down của icon tài khoản*/
+.account-dropdown{
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 160px;
+    display: none;
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+.account-dropdown li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+.account-dropdown li a:hover{
+    background-color: #f3f3f3;
+    color: rgb(134, 179, 237);
+}
+
+.account-menu:hover .account-dropdown{
+    display: block;
+}
